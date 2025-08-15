@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using Demo.overload_Examles;
+using Demo.overriding;
 
 
 namespace Demo
@@ -172,6 +173,28 @@ namespace Demo
 
             #endregion
 
+
+            #region Overriding
+
+            //TypeA  typeA = new TypeA(5);
+            //typeA.Method01(); // Output: Method01 from TypeA    
+            //typeA.Method02(); // Output: Method02 from TypeA :5 
+
+            //Console.WriteLine("=====================================");
+
+            //TypeB typeB = new TypeB(6, 10); 
+            //typeB.Method01(); // Output: Method01 from TypeB // keyword new 
+            //typeB.Method02(); // Output: Method02 from TypeB :5 10 // keyWord override
+
+
+
+
+
+
+
+
+
+            #endregion
 
 
 

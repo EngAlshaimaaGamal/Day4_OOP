@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Demo
+namespace Demo.overload_Examles
 {
     internal class User
     { // BoCo class not have any behaviour, it is just a data holder    
