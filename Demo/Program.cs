@@ -101,7 +101,7 @@ namespace Demo
             //c5 =c1++; // Unary plus operator    
 
             //Console.WriteLine(c5); // Output: 3 + 4i
-             
+
             //MyComplex c6 = new MyComplex();
             //c6 = c2--; // Unary minus operator  
             //Console.WriteLine(c6); // Output: 7 + 8i    
@@ -110,6 +110,22 @@ namespace Demo
 
 
 
+
+
+            #endregion
+            #region Relational operator
+
+            // MyComplex c1 = new MyComplex() { Real = 3, Img = 4 };
+           
+            
+            //MyComplex c2 = new MyComplex() { Real = 7, Img = 8 };
+
+            //if(c1>c2)
+            //    Console.WriteLine("c1 is greater than c2"); 
+            //else if (c1 < c2)   
+            //    Console.WriteLine("c1 is less than c2");
+            //else
+            //    Console.WriteLine("c1 is equal to c2"); 
 
 
             #endregion

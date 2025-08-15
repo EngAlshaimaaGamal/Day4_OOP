@@ -118,11 +118,29 @@ namespace Demo.overload_Examles
          
 
         }
-            
-        
-        
-        
-}
+
+        public static bool operator <(MyComplex c1, MyComplex c2)
+        {
+            if(c1?.Real == c2?.Real)
+                return c1?.Img < c2?.Img;
+            else
+                return c1?.Real < c2?.Real;   
+
+        }
+
+
+        public static bool operator >(MyComplex c1, MyComplex c2)
+        {
+            if (c1?.Real == c2?.Real)
+                return c1?.Img > c2?.Img;
+            else
+                return c1?.Real > c2?.Real;
+        }   
+
+
+
+
+    }
 
         #endregion
 
