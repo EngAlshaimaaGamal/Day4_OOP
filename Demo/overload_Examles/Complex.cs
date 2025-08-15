@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -88,8 +89,43 @@ namespace Demo.overload_Examles
         }
 
 
+        public static MyComplex operator ++(MyComplex c)
+        {
+
+            if (c is not null)
+            {
+                return new MyComplex()
+                {
+                    Real = (c.Real) + 1,
+                    Img = c.Img
+                };
+
+            }
+            else
+                return new MyComplex();
+
+         }
+
+
+        public static MyComplex operator --(MyComplex c)
+        {
+            return new MyComplex()
+            {
+                Real = (c?.Real ?? 0) - 1,
+                Img = c?.Img ?? 0
+
+            };
+         
+
+        }
+            
+        
+        
+        
+}
+
         #endregion
 
 
-    }
+    
 }
