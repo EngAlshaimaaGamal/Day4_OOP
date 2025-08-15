@@ -8,9 +8,9 @@ namespace Demo
     {
         #region Methods overLoading 
 
-        public static int SumNumbers(int z, int y) 
+        public static int SumNumbers(int z, int y)
         {
-            return z + y;   
+            return z + y;
 
 
         }
@@ -30,7 +30,7 @@ namespace Demo
 
 
 
-        public static int SumNumbers(int z, int y, int x) 
+        public static int SumNumbers(int z, int y, int x)
         {
             return z + y + x;
         }
@@ -116,8 +116,8 @@ namespace Demo
             #region Relational operator
 
             // MyComplex c1 = new MyComplex() { Real = 3, Img = 4 };
-           
-            
+
+
             //MyComplex c2 = new MyComplex() { Real = 7, Img = 8 };
 
             //if(c1>c2)
@@ -130,8 +130,48 @@ namespace Demo
 
             #endregion
 
+            #region Casting operator overloading
+
+            #region Casting Builtin type
+            //MyComplex c1 = new MyComplex() { Real = 3, Img = 4 };
+
+            //int x = (int)c1; // Implicit conversion to int   invalid
+            //Console.WriteLine(x); // Output: 3
+
+            //string str = c1; // Implicit conversion to string
+            //Console.WriteLine(str); // Output: 3 + 4i   
+
+
 
             #endregion
+
+            #region user_defined DataType casting
+
+            //User user1 = new User()
+            //{
+            //    Id = 1,
+            //    FullName = "John Doe",
+            //    Email = "John@email.com",
+            //    Password = "P@ssw0rd",
+            //    SecuirtyStamp = Guid.NewGuid()
+
+            //};
+            //UserViewModel userViewModel = (UserViewModel)user1; // Implicit conversion to UserViewModel    
+            //                                                    // Manual Mapping  ====> AutoMapper in Entity Framework Core
+            //Console.WriteLine($"Id: {userViewModel.Id}, FirstName: {userViewModel.FirstName}, LastName: {userViewModel.LastName}, Email: {userViewModel.Email}"); // Output: Id: 1, FirstName: John, LastName: Doe, Email:  
+
+
+
+            #endregion
+
+
+
+
+            #endregion
+
+
+            #endregion
+
 
 
 

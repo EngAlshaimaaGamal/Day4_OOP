@@ -12,7 +12,7 @@ namespace Demo.overload_Examles
 
         #region Properities
 
-        public double Real { get; set; }
+        public int Real { get; set; }
         public double Img { get; set; }
 
 
@@ -138,12 +138,47 @@ namespace Demo.overload_Examles
         }   
 
 
+        public static bool operator ==(MyComplex c1, MyComplex c2)
+        {
+            return (c1?.Real == c2?.Real) && (c1?.Img == c2?.Img);
+        }  
+        
+        public static bool operator !=(MyComplex c1, MyComplex c2)
+        {
+            return !(c1 == c2);
+        }
+
+        public static explicit operator int(MyComplex c) 
+        {
+            return c?.Real ?? 0;
+
+            // not protictife code
+            //if (c is not null)
+            //{
+            //    return (int)(c.Real + c.Img);
+            //}
+            //else
+            //{
+            //    return 0;
+            //}
+            //
 
 
-    }
+        }
+
+        public static implicit operator string(MyComplex c)
+        {
+            return  c?.ToString()?? string.Empty;    // protective code
+        }
+
 
         #endregion
 
 
-    
+    }
+
+
+
+
+
 }
