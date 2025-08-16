@@ -176,6 +176,9 @@ namespace Demo
 
             #region Overriding
 
+
+            #region Example 01
+
             //TypeA  typeA = new TypeA(5);
             //typeA.Method01(); // Output: Method01 from TypeA    
             //typeA.Method02(); // Output: Method02 from TypeA :5 
@@ -187,6 +190,32 @@ namespace Demo
             //typeB.Method02(); // Output: Method02 from TypeB :5 10 // keyWord override
 
 
+            #endregion
+
+            #region Example 02 
+
+            //TypeA T1 = new TypeB(5, 6);
+
+            //T1.A = 10; // Accessing property from TypeA
+            //// T1.B= 20; // This will cause a compile-time error because B is not defined in TypeA    
+             
+            //T1.Method01(); // static binding, calls TypeA's Method01
+            //               // compile time binding
+            //               // ketWord new 
+
+
+
+
+
+
+            //T1.Method02();  // Dynamic binding, calls TypeB's Method02
+            //                // run time binding
+            //                // keyword override 
+
+
+
+            #endregion
+
 
 
 
@@ -195,6 +224,8 @@ namespace Demo
 
 
             #endregion
+
+
 
 
 
