@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 using Demo.overload_Examles;
 using Demo.overriding;
 
@@ -47,6 +48,15 @@ namespace Demo
 
         #endregion
 
+
+        public static void ProcessData(Employee emp)  // binding reference from base refere to object child
+        {
+            emp.GetDataEmployee();
+            emp.GetTypeEmployee();
+        
+
+
+        }
 
 
         static void Main(string[] args)
@@ -173,6 +183,9 @@ namespace Demo
 
             #endregion
 
+     
+
+
 
             #region Overriding
 
@@ -198,7 +211,7 @@ namespace Demo
 
             //T1.A = 10; // Accessing property from TypeA
             //// T1.B= 20; // This will cause a compile-time error because B is not defined in TypeA    
-             
+
             //T1.Method01(); // static binding, calls TypeA's Method01
             //               // compile time binding
             //               // ketWord new 
@@ -211,6 +224,30 @@ namespace Demo
             //T1.Method02();  // Dynamic binding, calls TypeB's Method02
             //                // run time binding
             //                // keyword override 
+
+
+
+            #endregion
+
+            #region Example 03
+
+            //FulltimeEmployee fulltimeEmployee = new FulltimeEmployee(1, "John Doe", 30, 5000);  
+
+            //fulltimeEmployee.GetTypeEmployee(); // Output: This is a full time employee
+            //fulltimeEmployee.GetDataEmployee(); // Output: ID: 1, Name: John Doe, Age: 30, Salary: 5000, Type: Full Time
+
+            // Console.WriteLine(" \n \n=====================================");    
+
+            //ParttimeEmployee parttimeEmployee = new ParttimeEmployee(2, "Jane Smith", 25, 3000, 20, 10);
+            //parttimeEmployee.GetTypeEmployee(); // Output: This is a part time employee 
+            //parttimeEmployee.GetDataEmployee(); // Output: ID: 2, Name: Jane Smith, Age: 25, Salary: 3000, Hours Worked: 20, Count of Hours: 10 
+
+
+
+            //Console.WriteLine(" \n \n=====================================");
+
+            // ProcessData(fulltimeEmployee); // Output: ID: 1, Name: John Doe, Age: 30, Salary: 5000, Type: Full Time
+            //ProcessData(parttimeEmployee); // Output: ID: 2, Name: Jane Smith, Age: 25, Salary: 3000, Hours Worked: 20, Count of Hours: 10   
 
 
 
